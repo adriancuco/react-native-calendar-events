@@ -302,6 +302,10 @@ public class CalendarEvents extends ReactContextBaseJavaModule {
         if (title != null) {
             eventValues.put(CalendarContract.Events.TITLE, title);
         }
+        
+        if (details.hasKey("color")) {
+            eventValues.put(CalendarContract.Events.EVENT_COLOR_KEY, details.getString("color"));
+        }
 
         if (details.hasKey("description")) {
             eventValues.put(CalendarContract.Events.DESCRIPTION, details.getString("description"));
